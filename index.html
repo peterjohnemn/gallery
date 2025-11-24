@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="hero-section">
+        <div class="overlay">
+            <h1 class="display-4 text-white">Cigarette Library</h1>
+            <p class="lead text-white">Explore iconic cigarette brands and their design legacy.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row" id="gallery-row"></div>
+    </div>
+
+    <script src="data.js"></script>
+
+    <script>
+        var galleryRow = document.getElementById("gallery-row")
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            galleryRow.innerHTML += `
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="card my-3 shadow-sm">
+                    <img src="` + galleryItems[i].image + `" 
+                    class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">` + galleryItems[i].title + `
+                        </h5>
+                        <p class="card-text">
+                            ` + galleryItems[i].description + `
+                        </p>
+                </div>
+            </div>
+        </div>
+        `;
+        }
+    </script>
+
+    <section class="warning-full bg-danger text-white py-4">
+        <div
+            class="container d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
+            <img src="images/warning.jpg" alt="Nicotine Warning" class="img-fluid warning-img me-md-4 mb-3 mb-md-0">
+            <div>
+                <div class="col-md-9">
+                    <h5 class="fw-bold">Health Warning</h5>
+                    <p class="mb-0">Smoking is harmful to your health. This gallery is for project purposes only.</p>
+                    <p class="mb-0">WARNING: This product contains nicotine. Nicotine is an addictive chemical.</p>
+                </div>
+            </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

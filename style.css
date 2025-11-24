@@ -1,0 +1,33 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.warning-full {
+  width: 100%;
+}
+
+.warning-img {
+  max-width: 180px;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.card-img-top { 
+  height: 400px; 
+  object-fit: cover; 
+}
+
