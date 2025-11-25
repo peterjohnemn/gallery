@@ -1,7 +1,6 @@
 .hero-section {
   position: relative;
   height: 100vh;
-  background-image: url('videos/cig.mp4');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,15 +9,21 @@
   align-items: center;
 }
 
-.hero-section .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 10px;
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-.card-img-top { 
-  height: 400px; 
-  object-fit: cover; 
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .hero-video {
@@ -31,9 +36,6 @@
   z-index: 0;
 }
 
-.hero-section::before {
-  z-index: 1;
-}
 
 .hero-content {
   position: relative;
@@ -54,12 +56,12 @@
 #illness-carousel .carousel-item {
   border-radius: 25px;
   overflow: hidden;
-  max-height: 600px;
+  max-height: 500px;
 }
 
 #illness-carousel .carousel-item img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -88,11 +90,85 @@
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(10px); }
-  60% { transform: translateY(5px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(10px);
+  }
+
+  60% {
+    transform: translateY(5px);
+  }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+
+.card {
+  background: rgba(158, 155, 155, 0.25);
+  backdrop-filter: blur(10px) brightness(100%);
+  -webkit-backdrop-filter: blur(10px) brightness(100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(13, 145, 155, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#gallery-section {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+#gallery-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#gallery-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+#illness-carousel {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+#illness-carousel h2,
+#illness-carousel p {
+  color: #f0f0f0;
+}
+
+#illness-carousel .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
 }
