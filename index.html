@@ -12,16 +12,115 @@
 </head>
 
 <body>
-    <section class="hero-section">
-        <div class="overlay">
-            <h1 class="display-4 text-white">Cigarette Library</h1>
-            <p class="lead text-white">Explore iconic cigarette brands and their design legacy.</p>
+    <section id="hero" class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/cig.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content text-center text-white">
+            <h1 class="display-3 fw-bold">Cigarette Library</h1>
+            <p class="lead">Explore iconic cigarette brands and their design legacy.</p>
+            <hr class="my-4 w-25 mx-auto opacity-75">
+        </div>
+
+                <div class="scroll-down">
+            <a href="#gallery-row" class="text-white text-decoration-none">
+                <span class="fs-2">&#x25BC;</span>
+            </a>
         </div>
     </section>
+
 
     <div class="container">
         <div class="row" id="gallery-row"></div>
     </div>
+
+    <section id="illness-carousel" class="container-fluid py-5 content-section">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Smoking-Related Illnesses</h2>
+            <p class="lead text-dark">Visual insights into the health risks caused by smoking</p>
+        </div>
+
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide my-5">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/lungs.jpg" class="d-block w-100" alt="Lung Cancer">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lung Cancer</h5>
+                            <p>Smoking causes nearly 90% of lung cancer cases. It’s the leading cause of cancer death
+                                worldwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/bladder.jpg" class="d-block w-100" alt="Bladder Cancer">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Bladder Cancer</h5>
+                            <p>Harmful chemicals from tobacco are filtered by the kidneys and stored in the bladder,
+                                increasing cancer risk.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/throat.jpg" class="d-block w-100" alt="Throat and Mouth Cancer">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Throat and Mouth Cancer</h5>
+                            <p>Tobacco chemicals damage cells in the mouth, throat, and voice box, leading to painful
+                                and disfiguring cancers.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/eye.jpg" class="d-block w-100" alt="Cataracts and Vision Loss">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cataracts and Vision Loss</h5>
+                            <p>Smoking contributes to cataracts and macular degeneration, leading to vision impairment
+                                and blindness.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="images/pad.jpeg" class="d-block w-100" alt="Cataracts and Vision Loss">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Peripheral Artery Disease (PAD)</h5>
+                            <p>Smoking restricts blood flow to limbs, increasing the risk of infection, pain, and even
+                                amputation.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Cigarette Gallery | Peter John Emanuelle Nuñez</p>
+    </footer>
+
 
     <script src="data.js"></script>
 
@@ -45,21 +144,8 @@
         </div>
         `;
         }
+
     </script>
-
-    <section class="warning-full bg-danger text-white py-4">
-        <div
-            class="container d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start">
-            <img src="images/warning.jpg" alt="Nicotine Warning" class="img-fluid warning-img me-md-4 mb-3 mb-md-0">
-            <div>
-                <div class="col-md-9">
-                    <h5 class="fw-bold">Health Warning</h5>
-                    <p class="mb-0">Smoking is harmful to your health. This gallery is for project purposes only.</p>
-                    <p class="mb-0">WARNING: This product contains nicotine. Nicotine is an addictive chemical.</p>
-                </div>
-            </div>
-    </section>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
